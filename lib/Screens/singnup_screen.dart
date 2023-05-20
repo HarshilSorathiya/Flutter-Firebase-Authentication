@@ -23,8 +23,8 @@ class _SingUpScreenState extends State<SingUpScreen> {
         email: emailController.text,
         password: passwordController.text,
         context: context);
-    emailController.clear();
-    passwordController.clear();
+    // emailController.clear();
+    // passwordController.clear();
   }
 
   // String? validateEmail(String? formEmail) {
@@ -38,6 +38,13 @@ class _SingUpScreenState extends State<SingUpScreen> {
 
   //   return null;
   // }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    emailController.dispose();
+    passwordController.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
