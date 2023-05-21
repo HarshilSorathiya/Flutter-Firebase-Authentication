@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_auth/Screens/user_screen.dart';
 import 'package:flutter_firebase_auth/Screens/singnup_screen.dart';
 import 'package:flutter_firebase_auth/firebase_options.dart';
 
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(),
       routes: {
+        '/0': (context) => UserScreen(),
         "/1": (context) => SingUpScreen(),
         "/2": (context) => LoginScreen(),
         "/3": (context) => PhoneScreen()
